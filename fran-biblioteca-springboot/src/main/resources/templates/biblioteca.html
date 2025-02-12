@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página</title>
+    <!-- Enlace al CSS de Pico -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+</head>
+<body>
+    <h1>Mi biblioteca</h1>
+  
+    <table>
+      <tr>
+        <th>T&iacute;tulo</th>
+        <th>Autor</th>
+      </tr>
+      <tr th:each="book : ${books}">
+        <td th:text="${book.title}">titulo</td>
+        <td th:text="${book.author}">autor</td>
+      </tr>
+    </table>
+  
+    <p>
+      <a href="/index.html" th:href="@{/}">Home</a>
+    </p>
+  </body>
+</html>
+
