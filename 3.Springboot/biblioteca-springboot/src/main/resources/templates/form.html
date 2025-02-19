@@ -3,6 +3,15 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
   </head>
   <body class="container">
+    <nav>
+      <ul>
+        <li><a href="/createBook">Crear libro</a></li>
+        <li><a href="/books">Recuperar libros</a></li>
+        <li><a href="/api/pdfreport">PDF report</a></li>
+        <li><a href="/api/authorsbvmc">Wikidata call</a></li>
+        <li><a href="/searchBook">Buscar libro</a></li>
+      </ul>
+    </nav>
     <h1>Form</h1>
     <form
       action="#"
@@ -10,9 +19,9 @@
       th:object="${book}"
       method="post"
     >
-      <p>Título: <input type="text" th:field="*{title}" /></p>
-      <p>Autor: <input type="text" th:field="*{author}" /></p>
-      <p>Publicación: <input type="date" th:field="*{publication}" /></p>
+      <label>Título<input type="text" th:field="*{title}" aria-label="Título" placeholder="Título" required /></label>
+      <label>Autor<input type="text" th:field="*{author}" aria-label="Autor" placeholder="Autor" required /></label>
+      <label>Fecha de Publicación <input type="date" th:field="*{publication}" /></label>
       <p>
         <input type="submit" value="Crear" />
         <input type="reset" value="Reset" />

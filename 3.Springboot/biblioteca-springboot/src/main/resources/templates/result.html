@@ -3,11 +3,18 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="/createBook">Crear libro</a></li>
+        <li><a href="/books">Recuperar libros</a></li>
+        <li><a href="/api/pdfreport">PDF report</a></li>
+        <li><a href="/api/authorsbvmc">Wikidata call</a></li>
+        <li><a href="/searchBook">Buscar libro</a></li>
+      </ul>
+    </nav>
     <h1>Result</h1>
     <p th:text="'Título: ' + ${book.title}" />
     <p th:text="'Autor: ' + ${book.author}" />
     <p th:text="'Fecha de publicación: ' + ${book.publication}" />
-    <a href="/createBook">Crear libro</a>
-    <a href="/books">Recuperar libros</a>
   </body>
 </html>

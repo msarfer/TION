@@ -3,13 +3,22 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
   </head>
   <body class="container">
+    <nav>
+      <ul>
+        <li><a href="/createBook">Crear libro</a></li>
+        <li><a href="/books">Recuperar libros</a></li>
+        <li><a href="/api/pdfreport">PDF report</a></li>
+        <li><a href="/api/authorsbvmc">Wikidata call</a></li>
+        <li><a href="/searchBook">Buscar libro</a></li>
+      </ul>
+    </nav>
     <h1>Search Form</h1>
     <form action="#" th:action="@{/searchBook}" method="get">
-      <p>Título: <input type="text" th:name="text" /></p>
-      <p>
+      <label>Título<input type="text" th:name="text" aria-label="Título" placeholder="Título" required /></label>
+      <div>
         <input type="submit" value="Buscar" />
         <input type="reset" value="Reset" />
-      </p>
+      </div>
     </form>
 
     <table>
@@ -24,9 +33,5 @@
         <td th:text="${book.publication}">publiacion</td>
       </tr>
     </table>
-
-    <p>
-      <a href="/index.html" th:href="@{/}">Home</a>
-    </p>
   </body>
 </html>

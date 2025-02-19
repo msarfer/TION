@@ -3,6 +3,15 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
   </head>
   <body class="container">
+    <nav>
+      <ul>
+        <li><a href="/createBook">Crear libro</a></li>
+        <li><a href="/books">Recuperar libros</a></li>
+        <li><a href="/api/pdfreport">PDF report</a></li>
+        <li><a href="/api/authorsbvmc">Wikidata call</a></li>
+        <li><a href="/searchBook">Buscar libro</a></li>
+      </ul>
+    </nav>
     <h1>Mi biblioteca</h1>
 
     <table>
@@ -17,9 +26,5 @@
         <td th:text="${book.publication}">publication</td>
       </tr>
     </table>
-
-    <p>
-      <a href="/index.html" th:href="@{/}">Home</a>
-    </p>
   </body>
 </html>
