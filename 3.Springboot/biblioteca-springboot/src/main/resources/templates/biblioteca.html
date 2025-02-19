@@ -1,23 +1,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
-</head>
-<body>
-<h1>Mi biblioteca</h1>
+  <head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+  </head>
+  <body class="container">
+    <h1>Mi biblioteca</h1>
 
-<table>
-    <tr>
+    <table>
+      <tr>
         <th>T&iacute;tulo</th>
         <th>Autor</th>
-    </tr>
-    <tr th:each="book : ${books}">
+      </tr>
+      <tr th:each="book : ${books}">
         <td th:text="${book.title}">titulo</td>
         <td th:text="${book.author}">autor</td>
-    </tr>
-</table>
+      </tr>
+    </table>
 
-<p>
-    <a href="/index.html" th:href="@{/}">Home</a>
-</p>
-</body>
+    <p>
+      <a href="/index.html" th:href="@{/}">Home</a>
+    </p>
+  </body>
 </html>

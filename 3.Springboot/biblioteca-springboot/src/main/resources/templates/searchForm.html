@@ -1,28 +1,30 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
-</head>
-<body>
-<h1>Search Form</h1>
-<form action="#" th:action="@{/searchBook}"  method="get">
-    <p>Título: <input type="text" th:name="text" /></p>
-    <p><input type="submit" value="Buscar" /> <input type="reset" value="Reset" /></p>
-</form>
+  <head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+  </head>
+  <body>
+    <h1>Search Form</h1>
+    <form action="#" th:action="@{/searchBook}" method="get">
+      <p>Título: <input type="text" th:name="text" /></p>
+      <p>
+        <input type="submit" value="Buscar" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
 
-<table>
-    <tr>
+    <table>
+      <tr>
         <th>Título</th>
         <th>Autor</th>
-    </tr>
-    <tr th:each="book : ${libros}">
+      </tr>
+      <tr th:each="book : ${libros}">
         <td th:text="${book.title}">titulo</td>
         <td th:text="${book.author}">autor</td>
-    </tr>
-</table>
+      </tr>
+    </table>
 
-
-<p>
-    <a href="/index.html" th:href="@{/}">Home</a>
-</p>
-</body>
+    <p>
+      <a href="/index.html" th:href="@{/}">Home</a>
+    </p>
+  </body>
 </html>

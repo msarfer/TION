@@ -1,13 +1,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-  <link rel="stylesheet" th:href="@{/css/styles.css}">
-</head>
-<body>
-<h1>Form</h1>
-<form action="#" th:action="@{/createBook}" th:object="${book}" method="post">
-  <p>Título: <input type="text" th:field="*{title}" /></p>
-  <p>Autor: <input type="text" th:field="*{author}" /></p>
-  <p><input type="submit" value="Crear" /> <input type="reset" value="Reset" /></p>
-</form>
-</body>
+  <head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+  </head>
+  <body class="container">
+    <h1>Form</h1>
+    <form
+      action="#"
+      th:action="@{/createBook}"
+      th:object="${book}"
+      method="post"
+    >
+      <p>Título: <input type="text" th:field="*{title}" /></p>
+      <p>Autor: <input type="text" th:field="*{author}" /></p>
+      <p>
+        <input type="submit" value="Crear" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
+  </body>
 </html>
