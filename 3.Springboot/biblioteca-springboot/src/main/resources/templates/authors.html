@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+  </head>
+  <body class="container">
+    <h1>Autores</h1>
+
+    <table>
+      <tr>
+        <th>T&iacute;tulo</th>
+        <th>Autor</th>
+      </tr>
+      <tr th:each="author : ${authors}">
+        <td th:text="${author.authorLabel.value}">titulo</td>
+        <td th:text="${book.author}">autor</td>
+      </tr>
+    </table>
+
+    <p>
+      <a href="/index.html" th:href="@{/}">Home</a>
+    </p>
+  </body>
+</html>
