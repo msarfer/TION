@@ -39,7 +39,7 @@ public class WikidataService {
 		Query query = QueryFactory.create(queryString) ;
 		try (QueryExecution qexec = QueryExecutionFactory.create(query, ModelFactory.createDefaultModel())) {
 			ResultSet rs = qexec.execSelect() ;
-			ResultSetFormatter.out(System.out, rs, query) ;
+			//ResultSetFormatter.out(System.out, rs, query) ;
 
 			ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
