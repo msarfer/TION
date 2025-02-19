@@ -1,6 +1,7 @@
 package es.ua.biblioteca.model;
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.Objects;
@@ -14,6 +15,7 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date publication;
 
     public Book(String title, String author) {
@@ -28,7 +30,6 @@ public class Book {
     }
 
     public Book() {
-
     }
 
     public void setId(Long id) {

@@ -7,12 +7,14 @@
 
     <table>
       <tr>
-        <th>T&iacute;tulo</th>
+        <th>Título</th>
         <th>Autor</th>
+        <th>Fecha de publicación</th>
       </tr>
       <tr th:each="book : ${books}">
         <td th:text="${book.title}">titulo</td>
         <td th:text="${book.author}">autor</td>
+        <td th:text="${book.publication}">publication</td>
       </tr>
     </table>
 
