@@ -1,4 +1,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
 <body>
 <h1>Search Form</h1>
 <form action="#" th:action="@{/searchBook}" method="get">
@@ -16,5 +19,10 @@
         <td th:text="${book.author}">autor</td>
     </tr>
 </table>
+
+
+<p>
+    <a href="/index.html" th:href="@{/}">Home</a>
+</p>
 </body>
 </html>
