@@ -13,12 +13,9 @@
       </ul>
     </nav>
     <h1>Buscar Obra</h1>
-    <form action="#" th:action="@{/searchBook}" method="get">
-      <label>Título<input type="text" th:name="text" aria-label="Título" placeholder="Título" required /></label>
-      <div>
-        <input type="submit" value="Buscar" />
-        <input type="reset" value="Reset" />
-      </div>
+    <form action="#" th:action="@{/searchBook}" method="get" role="search">
+      <input type="search" th:name="text" aria-label="Título" placeholder="Título de la obra" required />
+      <input type="submit" value="Buscar" />
     </form>
 
     <table>

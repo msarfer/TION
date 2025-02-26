@@ -22,10 +22,10 @@
       <label>Título<input type="text" th:field="*{title}" aria-label="Título" placeholder="Título" required /></label>
       <label>Autor<input type="text" th:field="*{author}" aria-label="Autor" placeholder="Autor" required /></label>
       <label>Fecha de Publicación <input type="date" th:field="*{publication}" /></label>
-      <p>
+      <div role="group">
         <input type="submit" value="Crear" />
         <input type="reset" value="Reset" />
-      </p>
+      </div>
     </form>
   </body>
 </html>
