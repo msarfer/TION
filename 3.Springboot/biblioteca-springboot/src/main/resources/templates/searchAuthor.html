@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <style>
+      .custom-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+      img {
+        object-fit: fill;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <nav>
+      <ul>
+        <li><a href="/createBook">Crear libro</a></li>
+        <li><a href="/books">Recuperar libros</a></li>
+        <li><a href="/api/pdfreport">PDF report</a></li>
+        <li><a href="/searchBook">Buscar libro</a></li>
+        <li><a href="/searchAuthor">Buscar autor Wikidata</a></li>
+      </ul>
+    </nav>
+    <h1>Búsqueda de autores por nombre de pila</h1>
+    <form action="#" th:action="@{/searchAuthor}" method="get" role="search">
+      <input type="search" th:name="name" aria-label="Nombre" placeholder="Nombre" autocomplete="off" required />
+      <input type="number" value="1" placeholder="Cantidad de resultados" min="1" max="50" step="1" name="limit" required/>
+      <input type="submit" value="Buscar" />
+    </form>
+
+    <section class="custom-grid">
+      <article th:each="response : ${autores}">
+        <header th:height="250px">
+          <img th:src="${response.imagen}" alt="Imagen de ${response.nombre}" height="100%"/>
+        </header>
+        <main>
+          <hgroup>
+            <h2 th:text="|${response.nombre} ${response.apellido}|"></h2>
+            <h6 th:text="${response.nacionalidad}">País</h6>
+            <h6 th:text="${response.fechaNacimiento}">Nacimiento</h6>
+          </hgroup>
+        </main>
+      </article>
+    </section>
+
+
+<!--    <table>-->
+<!--      <tr>-->
+<!--        <th>Título</th>-->
+<!--        <th>Autor</th>-->
+<!--        <th>Publicación</th>-->
+<!--      </tr>-->
+<!--      <tr th:each="book : ${libros}">-->
+<!--        <td th:text="${book.title}">titulo</td>-->
+<!--        <td th:text="${book.author}">autor</td>-->
+<!--        <td th:text="${book.publication}">publiacion</td>-->
+<!--      </tr>-->
+<!--    </table>-->
+  </body>
+</html>

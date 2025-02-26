@@ -8,11 +8,11 @@
         <li><a href="/createBook">Crear libro</a></li>
         <li><a href="/books">Recuperar libros</a></li>
         <li><a href="/api/pdfreport">PDF report</a></li>
-        <li><a href="/api/authorsbvmc">Wikidata call</a></li>
         <li><a href="/searchBook">Buscar libro</a></li>
+        <li><a href="/searchAuthor">Buscar autor Wikidata</a></li>
       </ul>
     </nav>
-    <h1>Search Form</h1>
+    <h1>Buscar Obra</h1>
     <form action="#" th:action="@{/searchBook}" method="get">
       <label>Título<input type="text" th:name="text" aria-label="Título" placeholder="Título" required /></label>
       <div>

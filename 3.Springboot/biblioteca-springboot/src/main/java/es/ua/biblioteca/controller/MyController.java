@@ -5,6 +5,7 @@ import es.ua.biblioteca.service.BookServiceInterface;
 
 import es.ua.biblioteca.service.WikidataService;
 import es.ua.biblioteca.util.GeneratePdfReport;
+import jakarta.json.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.io.ByteArrayInputStream;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -92,7 +94,7 @@ public class MyController {
     }
 
     @RequestMapping("/authorsbvmc")
-    public String getAuthorsWikidata() {
-        return wikidataService.getAuthors(10);
+    public List<Map<String, String>> getAuthorsWikidata() {
+        return wikidataService.getAuthors(10, "Marco");
     }
 }

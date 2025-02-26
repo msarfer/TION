@@ -1,6 +1,11 @@
 package es.ua.biblioteca.controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
+import es.ua.biblioteca.service.WikidataService;
+import jakarta.json.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +21,9 @@ import es.ua.biblioteca.service.BookServiceInterface;
 public class ControllerTM {
     @Autowired
     private BookServiceInterface bookService;
-    
+    @Autowired
+    private WikidataService wikidataService;
+
     @RequestMapping("/books")
     public String books(Model model) {
         List<Book> books = bookService.getAllBooks();
@@ -40,6 +47,20 @@ public class ControllerTM {
         model.addAttribute("libros", bookService.search(text));
 
         return "searchForm";
+    }
+
+    @RequestMapping("/searchAuthor")
+    public String searchAuthor(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "limit", required = false) Integer limit, Model model) {
+
+        if (name != null) {
+            List<Map<String, String>> res = wikidataService.getAuthors(limit, name);
+            model.addAttribute("autores", res);
+        } else {
+            model.addAttribute("autores", new ArrayList<>());
+        }
+
+
+        return "searchAuthor";
     }
 
     @PostMapping("/createBook")
