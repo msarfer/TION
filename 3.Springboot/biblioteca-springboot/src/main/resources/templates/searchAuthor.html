@@ -32,7 +32,7 @@
     <section class="custom-grid">
       <article th:each="response : ${autores}">
         <header th:height="250px">
-          <img th:src="${response.imagen}" alt="Imagen de ${response.nombre}" height="100%"/>
+          <img th:src="${response.imagen}" th:alt="${response.nombre}" height="100%"/>
         </header>
         <main>
           <hgroup>
@@ -43,19 +43,5 @@
         </main>
       </article>
     </section>
-
-
-<!--    <table>-->
-<!--      <tr>-->
-<!--        <th>Título</th>-->
-<!--        <th>Autor</th>-->
-<!--        <th>Publicación</th>-->
-<!--      </tr>-->
-<!--      <tr th:each="book : ${libros}">-->
-<!--        <td th:text="${book.title}">titulo</td>-->
-<!--        <td th:text="${book.author}">autor</td>-->
-<!--        <td th:text="${book.publication}">publiacion</td>-->
-<!--      </tr>-->
-<!--    </table>-->
   </body>
 </html>
