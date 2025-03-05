@@ -1,5 +1,10 @@
-INSERT INTO books(title, author, publication) VALUES('El Quíjote', 'Miguel de Cervantes', '2020-11-01');
-INSERT INTO books(title, author, publication) VALUES('El perro del hortelano', 'Lope de Vega', '2019-11-01');
-INSERT INTO books(title, author, publication) VALUES('Fuenteovejuna', 'Lope de Vega', '2018-11-01');
-INSERT INTO books(title, author, publication) VALUES('La dama boba', 'Lope de Vega', '2017-11-01');
-INSERT INTO books(title, author, publication) VALUES('El caballero de Olmedo', 'Lope de Vega', '2016-11-01');
+INSERT INTO books(title, author, publication) VALUES('Don Quijote de la Mancha', 'Miguel de Cervantes', '2020-11-01');
+INSERT INTO books(title, author, publication) VALUES('La Celestina', 'Fernando de Rojas', '2019-11-01');
+INSERT INTO books(title, author, publication) VALUES('La vida es sueño', 'Pedro Calderón de la Barca', '2018-11-01');
+INSERT INTO books(title, author, publication) VALUES('El Lazarillo de Tormes', 'Anónimo', '2017-11-01');
+INSERT INTO books(title, author, publication) VALUES('El burlador de Sevilla', 'Tirso de Molina', '2016-11-01');
+INSERT INTO books(title, author, publication) VALUES('Novelas ejemplares', 'Miguel de Cervantes', '2015-11-01');
+INSERT INTO books(title, author, publication) VALUES('El sí de las niñas', 'Leandro Fernández de Moratín', '2014-11-01');
+INSERT INTO books(title, author, publication) VALUES('Marianela', 'Benito Pérez Galdós', '2013-11-01');
+INSERT INTO books(title, author, publication) VALUES('Fortunata y Jacinta', 'Benito Pérez Galdós', '2012-11-01');
+INSERT INTO books(title, author, publication) VALUES('La Regenta', 'Leopoldo Alas "Clarín"', '2011-11-01');
