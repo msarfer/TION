@@ -18,4 +18,7 @@ Utiliza consultas SPARQL para recuperar datos estructurados sobre libros (títul
 - **Marco Sarrió Ferrández**
 
 ## Capturas
-
+### Código SPARQL
+![código sparql utilizado](sparql.PNG)
+### Interfaz final
+![visualización de los datos obtenidos en wikidata](resultado_sparql.PNG)
